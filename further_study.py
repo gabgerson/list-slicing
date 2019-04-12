@@ -125,6 +125,16 @@ def custom_remove(input_list, value):
             input_list[i:i+1] = []
             break
 
+    # solution
+    # counter = 0
+
+    # for i in input_list:
+    #     if i == value:
+    #         input_list[counter:counter + 1] = []
+    #         break
+
+    #     counter += 1
+
 def custom_pop(input_list):
     """Remove the last item in the list and returns it.
 
@@ -148,6 +158,12 @@ def custom_pop(input_list):
             input_list[i:i+1] = []
             return x
 
+    # solution
+    # last_value = input_list[-1]
+    #    input_list[-1:] = []
+
+    #    return last_value
+
 def custom_index(input_list, value):
     """Return the index of the first item of value found in input_list.
 
@@ -164,6 +180,15 @@ def custom_index(input_list, value):
     for i in range(length - 1):
         if input_list[i] == value: 
             return i 
+
+    # solution
+    # counter = 0
+
+    #     for i in input_list:
+    #         if i == value:
+    #             return counter
+
+    #         counter += 1
 
 
 def custom_count(input_list, value):
@@ -203,6 +228,15 @@ def custom_reverse(input_list):
     """
     input_list[:] = input_list[::-1]
 
+    # solution
+    # swap_number = custom_len(input_list) // 2
+
+    #     for i in range(swap_number):
+    #         current_n = input_list[i]
+    #         current_neg_n = input_list[(i + 1) * -1]
+    #         input_list[i] = current_neg_n
+    #         input_list[(i + 1) * -1] = current_n
+
 
 def custom_contains(input_list, value):
     """Return True or False if value is in the input_list.
@@ -223,9 +257,7 @@ def custom_contains(input_list, value):
     for i in input_list:
         if i == value:
             return True
-            break
-        else:
-            pass
+
     return False
 
 def custom_equality(some_list, another_list):
@@ -246,10 +278,12 @@ def custom_equality(some_list, another_list):
     length = custom_len(some_list)
     if custom_len(some_list) != custom_len(another_list):
         return False 
+
     else: 
         for i in range(length - 1):
             if some_list[i] != another_list[i]:
                 return False 
+                
         return True 
 
 ##############################################################################
